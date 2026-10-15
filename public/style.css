@@ -1,0 +1,37 @@
+:root {
+  --font-main: "Segoe UI", Arial, sans-serif;
+  --color-bg: #f3f4f6;
+  --color-surface: #ffffff;
+  --color-text: #1f2933;
+  --color-muted: #52606d;
+  --color-primary: #374151;
+  --color-accent: #1d4ed8;
+  --color-border: #d2d6dc;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-main); background: var(--color-bg); color: var(--color-text); line-height: 1.6; }
+.site-header { display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap; padding: 24px; background: var(--color-primary); color: white; }
+.site-header img { object-fit: cover; border-radius: 50%; border: 3px solid #cbd5e1; }
+.site-header h1 { margin: 0 0 6px; font-size: 1.5rem; }
+.site-header p { margin: 0; color: #e5e7eb; }
+.navigation { display: flex; justify-content: center; gap: 24px; padding: 14px; background: #e2e8f0; }
+.navigation a { color: #1e3a8a; font-weight: 600; }
+.layout { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; max-width: 1000px; margin: 28px auto; padding: 0 20px; }
+.panel { padding: 24px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 8px; }
+h2 { margin-top: 0; color: var(--color-primary); }
+form { display: grid; gap: 10px; max-width: 420px; }
+input, select, button { padding: 10px; border: 1px solid var(--color-border); border-radius: 5px; font: inherit; }
+button { width: fit-content; border: 0; background: var(--color-accent); color: white; cursor: pointer; }
+button:hover { background: #1e40af; }
+a { color: var(--color-accent); }
+.forecast-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+.weather-card { padding: 14px; border: 1px solid var(--color-border); border-radius: 7px; background: #f8fafc; }
+.weather-card h3 { margin: 0 0 8px; }
+.weather-card p { margin: 4px 0; }
+.footer { text-align: center; color: var(--color-muted); padding: 16px; }
+.about-panel { max-width: 900px; margin: 28px auto; }
+@media (max-width: 700px) {
+  .layout { grid-template-columns: 1fr; }
+  .forecast-grid { grid-template-columns: 1fr; }
+  .site-header { text-align: center; }
+}

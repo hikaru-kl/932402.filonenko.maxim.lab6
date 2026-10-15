@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Фотопортфолио и демонстрация фиктивного прогноза погоды на несколько дней.">
+  <title>Фотограф — прогноз погоды</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <img src="/avatar.jpg" alt="Портрет фотографа" width="100" height="100">
+    <div>
+      <h1>Филоненко Максим Викторович</h1>
+      <p>Фотограф и визуальный сторителлер</p>
+    </div>
+  </header>
+  <nav class="navigation">
+    <a href="/">Главная</a>
+    <a href="/about">О себе</a>
+  </nav>
+  <main class="layout">
+    <section class="panel">
+      <h2>Прогноз погоды на 3 дня</h2>
+      <p>Выберите город, чтобы получить демонстрационный прогноз с сервера.</p>
+      <form id="forecast-form">
+        <label for="city">Город</label>
+        <select id="city" name="city">
+          <option value="paris">Париж</option>
+          <option value="london">Лондон</option>
+          <option value="tokyo">Токио</option>
+          <option value="moscow">Москва</option>
+          <option value="newyork">Нью-Йорк</option>
+        </select>
+        <label for="days">Количество дней (1–7)</label>
+        <input id="days" name="days" type="number" min="1" max="7" value="3" required>
+        <button type="submit">Показать прогноз</button>
+      </form>
+      <p id="message" role="status"></p>
+      <div id="forecast" class="forecast-grid"></div>
+    </section>
+    <aside class="panel">
+      <h2>О проекте</h2>
+      <p>Учебный сайт с сервером Express и фиктивными данными прогноза погоды.</p>
+      <p><a href="/api/status">Проверить API статуса</a></p>
+    </aside>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2026 Филоненко Максим Викторович</p>
+  </footer>
+</body>
+</html>
