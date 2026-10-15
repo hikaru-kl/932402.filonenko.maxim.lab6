@@ -1,0 +1,18 @@
+{
+  "name": "Фотограф — прогноз погоды",
+  "short_name": "Прогноз",
+  "description": "Учебное приложение с фиктивным прогнозом погоды на несколько дней",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f3f4f6",
+  "theme_color": "#374151",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

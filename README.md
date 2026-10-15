@@ -23,3 +23,7 @@
 - `/api/forecast/paris`
 - `/api/forecast/tokyo?days=5`
 - `/api/status`
+
+## PWA
+
+The application includes `manifest.json`, an SVG icon and a service worker. Open the app through `http://localhost:3000`; service workers require localhost or HTTPS. Static pages and assets are cached for offline use. The forecast API needs a network/server connection and is not available offline.
